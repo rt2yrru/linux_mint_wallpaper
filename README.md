@@ -68,7 +68,7 @@ pamac build mint-backgrounds-uma
 
 ```
 
-**Option B: Using `debtap**`
+**Option B: Using `debtap**` **
 If you prefer using the `.deb` file directly:
 
 1. Install debtap: `yay -S debtap`
@@ -105,7 +105,7 @@ sudo dnf install ./mint-backgrounds-uma-1.2-2.noarch.rpm
 
 Since wallpapers are just image files, you can simply extract them without installing any packages:
 
-1. Download the `.tar.gz` source file.
+1. Download the `.tar.gz` source file. `http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz`
 2. Extract it.
 3. Move the images to your local background folder:
 
