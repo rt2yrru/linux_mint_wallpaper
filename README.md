@@ -118,13 +118,28 @@ echo "Done! Wallpapers should now be in /usr/share/backgrounds/"
 
 ### Option C: Downloading tar.gz
 
-You can directly download the tar.gz file:
+You can directly download the tar.gz files:
 
 ```bash
-wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz
-tar -xvf mint-backgrounds-uma_1.2.tar.gz
-sudo cp -r backgrounds/* /usr/share/backgrounds/
-sudo cp -r *-background-properties /usr/share/
+#!/bin/bash
+
+# 1. Download all tar.gz files
+echo "Downloading Mint backgrounds and artwork source files..."
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+
+# 2. Extract all tar.gz files
+echo "Extracting files..."
+for file in *.tar.gz; do
+    tar -xvf "$file"
+done
+
+# 3. Copy backgrounds to system directory
+echo "Installing wallpapers..."
+sudo cp -r */backgrounds/* /usr/share/backgrounds/ 2>/dev/null
+sudo cp -r */*-background-properties /usr/share/ 2>/dev/null
+
+echo "Done! Wallpapers installed to /usr/share/backgrounds/"
 ```
 
 ---
@@ -166,18 +181,26 @@ echo "Done! Check your Desktop settings for the new backgrounds."
 
 Since wallpapers are just image files, you can simply extract them without installing any packages:
 
-1. Download the `.tar.gz` source file:
-   ```
-   http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz
-   ```
-
-2. Extract it
-
-3. Move the images to your local background folder:
-
 ```bash
+#!/bin/bash
+
+# 1. Download all tar.gz source files
+echo "Downloading Mint backgrounds and artwork source files..."
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+
+# 2. Extract all tar.gz files
+echo "Extracting files..."
+for file in *.tar.gz; do
+    tar -xvf "$file"
+done
+
+# 3. Copy to local background folder
+echo "Installing to user directory..."
 mkdir -p ~/.local/share/backgrounds
-cp -r mint-backgrounds-uma/backgrounds/* ~/.local/share/backgrounds/
+cp -r */backgrounds/* ~/.local/share/backgrounds/ 2>/dev/null
+
+echo "Done! Wallpapers installed to ~/.local/share/backgrounds/"
 ```
 
 ### Summary of the .tar.gz structure
