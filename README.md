@@ -30,6 +30,94 @@ After installation, the wallpapers are typically located in the following path:
 * `/usr/share/backgrounds`
 
 
+---
+
+## **For Debian/Ubuntu-Based Users**
+
+*(Ubuntu, Pop!_OS, Zorin OS, Linux Lite, etc.)*
+
+**1. Download the Debian package:**
+
+```bash
+wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2_all.deb
+
+```
+
+**2. Install using dpkg:**
+
+```bash
+sudo dpkg -i mint-backgrounds-uma_1.2_all.deb
+# If there are missing dependencies, run:
+sudo apt install -f
+
+```
+
+---
+
+## **For Arch-Based Users**
+
+*(Arch Linux, Manjaro, Garuda, EndeavourOS, CachyOS, etc.)*
+
+**Option A: Using the AUR (Recommended)**
+Most Mint backgrounds are available in the Arch User Repository. You can install them directly without manual downloads:
+
+```bash
+yay -S mint-backgrounds-uma
+# or
+pamac build mint-backgrounds-uma
+
+```
+
+**Option B: Using `debtap**`
+If you prefer using the `.deb` file directly:
+
+1. Install debtap: `yay -S debtap`
+2. Create the Arch package: `debtap mint-backgrounds-uma_1.2_all.deb`
+3. Install the resulting file: `sudo pacman -U mint-backgrounds-uma-1.2-1-any.pkg.tar.zst`
+
+---
+
+## **For Fedora/RHEL-Based Users**
+
+*(Fedora, Red Hat Enterprise Linux, AlmaLinux, Rocky Linux, etc.)*
+
+**1. Install the `alien` conversion tool:**
+
+```bash
+sudo dnf install alien
+
+```
+
+**2. Convert and install:**
+
+```bash
+# Convert .deb to .rpm
+sudo alien -r mint-backgrounds-uma_1.2_all.deb
+
+# Install the generated RPM
+sudo dnf install ./mint-backgrounds-uma-1.2-2.noarch.rpm
+
+```
+
+---
+
+## **For All Other Distros (Manual Method)**
+
+Since wallpapers are just image files, you can simply extract them without installing any packages:
+
+1. Download the `.tar.gz` source file.
+2. Extract it.
+3. Move the images to your local background folder:
+
+```bash
+mkdir -p ~/.local/share/backgrounds
+cp -r mint-backgrounds-uma/backgrounds/* ~/.local/share/backgrounds/
+
+```
+
+## note : This list will be auto updated as its checked and confirmed 
+
+
 ### Linux Mint Release Versions and Codename
 
 | Version | Codename |
@@ -73,4 +161,4 @@ After installation, the wallpapers are typically located in the following path:
 | 22 | Wilma |
 | 22.1 | Xia |
 | 22.2 | Zara |
-| 22.3 | (not yet revealed) |
+| 22.3 | Zena |
