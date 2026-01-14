@@ -72,13 +72,13 @@ echo "Installation complete!"
 Most Mint backgrounds are available in the Arch User Repository. You can install them directly without manual downloads:
 
 ```bash
-yay -S mint-backgrounds-uma
+yay -S mint-backgrounds
 ```
 
 Or using pamac:
 
 ```bash
-pamac build mint-backgrounds-uma
+pamac build mint-backgrounds
 ```
 
 ### Option B: Using `debtap`
