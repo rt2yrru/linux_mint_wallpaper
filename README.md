@@ -283,6 +283,11 @@ You can directly access these through:
 | 21.2 | Victoria |
 | 21.3 | Virginia |
 | 22 | Wilma |
+| 22.1 | Xia |
+| 22.2 | Zara |
+| 22.3 | Zena |
+
+------
 
 
 ## Sources 
@@ -319,6 +324,3 @@ http://packages.linuxmint.com/pool/main/m/mint-backgrounds-wilma
 
 
 ```
-| 22.1 | Xia |
-| 22.2 | Zara |
-| 22.3 | Zena |
