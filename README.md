@@ -1,12 +1,8 @@
-
-
-***
-
 # Linux Mint Wallpaper Archive
 
 This archive contains **all Linux Mint wallpapers** from the beginning to the current version.
 
-***
+---
 
 ## Available Versions
 
@@ -14,32 +10,39 @@ The collection spans from **Linux Mint 7** to **Linux Mint 21.1**.
 
 The current size of the wallpaper archive is **1.1 GB**. Wallpapers for the upcoming **22.x series** will be added as they are released.
 
-***
+---
 
 ## How to Install
 
 Linux Mint users can install this package directly from the command line using one of the following commands:
 
-* `sudo apt install mint-backgrounds*`
-* `sudo apt install mint-backgrounds [codename]`
+```bash
+sudo apt install mint-backgrounds*
+```
+
+Or install a specific version:
+
+```bash
+sudo apt install mint-backgrounds-[codename]
+```
 
 Replace `[codename]` with the specific codename of the Linux Mint version you wish to install (e.g., `ulyssa`, `victoria`).
 
-After installation, the wallpapers are typically located in the following path:
+After installation, the wallpapers are typically located in:
 
-* `/usr/share/backgrounds`
-
+```
+/usr/share/backgrounds
+```
 
 ---
 
-## **For Debian/Ubuntu-Based Users**
+## For Debian/Ubuntu-Based Users
 
 *(Ubuntu, Pop!_OS, Zorin OS, Linux Lite, etc.)*
 
-**1. Download the Debian package:**
+### Download and Install
 
 ```bash
-
 #!/bin/bash
 
 # 1. Download all files from your generated text lists
@@ -56,36 +59,36 @@ echo "Resolving dependencies..."
 sudo apt install -f -y
 
 echo "Installation complete!"
-
-```
-
-
 ```
 
 ---
 
-## **For Arch-Based Users**
+## For Arch-Based Users
 
 *(Arch Linux, Manjaro, Garuda, EndeavourOS, CachyOS, etc.)*
 
-**Option A: Using the AUR (Recommended)**
+### Option A: Using the AUR (Recommended)
+
 Most Mint backgrounds are available in the Arch User Repository. You can install them directly without manual downloads:
 
 ```bash
 yay -S mint-backgrounds-uma
-# or
-pamac build mint-backgrounds-uma
-
 ```
----
 
-**Option B: Using `debtap**` **
+Or using pamac:
+
+```bash
+pamac build mint-backgrounds-uma
+```
+
+### Option B: Using `debtap`
+
 If you prefer using the `.deb` file directly:
 
-1. Install debtap: `yay -S deb
-2. proced like mentioned here
+1. Install debtap: `yay -S debtap`
+2. Run the following script:
 
-```
+```bash
 #!/bin/bash
 
 # 1. Download all files
@@ -113,36 +116,26 @@ sudo pacman -U *.pkg.tar.zst
 echo "Done! Wallpapers should now be in /usr/share/backgrounds/"
 ```
 
----
- Option C : Downloading tar.gz 
+### Option C: Downloading tar.gz
 
- You could direclty download the tar.gz  file 
+You can directly download the tar.gz file:
 
-```
+```bash
 wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz
- tar -xvf mint-backgrounds-uma_1.2.tar.gz
+tar -xvf mint-backgrounds-uma_1.2.tar.gz
 sudo cp -r backgrounds/* /usr/share/backgrounds/
 sudo cp -r *-background-properties /usr/share/
 ```
----
 
 ---
 
-## **For Fedora/RHEL-Based Users**
+## For Fedora/RHEL-Based Users
 
 *(Fedora, Red Hat Enterprise Linux, AlmaLinux, Rocky Linux, etc.)*
 
-**1. Install the `alien` conversion tool:**
+### Install using alien
 
 ```bash
-sudo dnf install alien
-
-```
-
-**2. Convert and install:**
-
-```bash
-# Convert .deb to .rpm
 #!/bin/bash
 
 # 1. Download all files
@@ -165,54 +158,71 @@ echo "Installing RPM packages..."
 sudo dnf install ./*.rpm -y
 
 echo "Done! Check your Desktop settings for the new backgrounds."
-
 ```
 
 ---
 
-## **For All Other Distros (Manual Method)**
+## For All Other Distros (Manual Method)
 
 Since wallpapers are just image files, you can simply extract them without installing any packages:
 
-1. Download the `.tar.gz` source file. `http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz`
-2. Extract it.
+1. Download the `.tar.gz` source file:
+   ```
+   http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz
+   ```
+
+2. Extract it
+
 3. Move the images to your local background folder:
 
 ```bash
 mkdir -p ~/.local/share/backgrounds
 cp -r mint-backgrounds-uma/backgrounds/* ~/.local/share/backgrounds/
-
 ```
 
----
+### Summary of the .tar.gz structure
 
-Summary of the .tar.gz structure
-Inside that mint-backgrounds-uma_1.2.tar.gz file, the folder structure is:
+Inside that `mint-backgrounds-uma_1.2.tar.gz` file, the folder structure is:
 
-backgrounds/ — Contains the actual images.
-
-cinnamon-background-properties/ — XML files for Cinnamon.
-
-gnome-background-properties/ — XML files for GNOME/XFCE.
-
-mate-background-properties/ — XML files for MATE.
+- `backgrounds/` — Contains the actual images
+- `cinnamon-background-properties/` — XML files for Cinnamon
+- `gnome-background-properties/` — XML files for GNOME/XFCE
+- `mate-background-properties/` — XML files for MATE
 
 ---
 
+## Package Lists
+
+### Note 1: Auto-Update
+
+This list of the deb and tar.gz files will be auto-updated as they are checked and confirmed.
+
+### Note 2: DEB Package Lists
+
+The DEB file lists are available at:
+- **Artwork DEBs**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_deb.txt
+- **Backgrounds DEBs**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt
+
+You can directly access these through:
+- https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
+- https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+
+### Note 3: Source Package Lists (.tar.gz)
+
+The source file lists are available at:
+- **Artwork sources**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_tar_gz.txt
+- **Background sources**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/background_tar_gz.txt
+
+You can directly access these through:
+- https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
+- https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+
 ---
 
-
-## note : This list of the deb and tar.gz will be auto updated as its checked and confirmed 
-
-## note 2 : the deb list is at https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_deb.txt  & https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt  of the deb files . you can direclty get this through  https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt   , https://rt2yrru.github.io/linux_mint_wallpaper/https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt
-
-## note 3 : source i.e .tar.gz list is at .  https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_tar_gz.txt  &  https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/background_tar_gz.txt . you can direclty get this through 
-https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt  , https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
-
-## # Linux Mint Release Versions and Codename
+## Linux Mint Release Versions and Codenames
 
 | Version | Codename |
-| :--- | :--- |
+|---------|----------|
 | 1 | Ada |
 | 2 | Barbara |
 | 3 | Cassandra |
