@@ -47,8 +47,13 @@ wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgro
 
 ```bash
 sudo dpkg -i mint-backgrounds-uma_1.2_all.deb
-# If there are missing dependencies, run:
-sudo apt install -f
+
+```
+
+or
+```
+sudo dpkg -i *.deb
+
 
 ```
 
@@ -67,6 +72,7 @@ yay -S mint-backgrounds-uma
 pamac build mint-backgrounds-uma
 
 ```
+---
 
 **Option B: Using `debtap**` **
 If you prefer using the `.deb` file directly:
@@ -74,6 +80,19 @@ If you prefer using the `.deb` file directly:
 1. Install debtap: `yay -S debtap`
 2. Create the Arch package: `debtap mint-backgrounds-uma_1.2_all.deb`
 3. Install the resulting file: `sudo pacman -U mint-backgrounds-uma-1.2-1-any.pkg.tar.zst`
+
+---
+ Option C : Downloading tar.gz 
+
+ You could direclty download the tar.gz  file 
+
+```
+wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2.tar.gz
+ tar -xvf mint-backgrounds-uma_1.2.tar.gz
+sudo cp -r backgrounds/* /usr/share/backgrounds/
+sudo cp -r *-background-properties /usr/share/
+```
+---
 
 ---
 
@@ -115,7 +134,22 @@ cp -r mint-backgrounds-uma/backgrounds/* ~/.local/share/backgrounds/
 
 ```
 
-## note : This list will be auto updated as its checked and confirmed 
+---
+
+Summary of the .tar.gz structure
+Inside that mint-backgrounds-uma_1.2.tar.gz file, the folder structure is:
+
+backgrounds/ — Contains the actual images.
+
+cinnamon-background-properties/ — XML files for Cinnamon.
+
+gnome-background-properties/ — XML files for GNOME/XFCE.
+
+mate-background-properties/ — XML files for MATE.
+
+---
+
+## note : This list of the deb and tar.gz will be auto updated as its checked and confirmed 
 
 
 ### Linux Mint Release Versions and Codename
