@@ -39,20 +39,25 @@ After installation, the wallpapers are typically located in the following path:
 **1. Download the Debian package:**
 
 ```bash
-wget http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma/mint-backgrounds-uma_1.2_all.deb
 
-```
+#!/bin/bash
 
-**2. Install using dpkg:**
+# 1. Download all files from your generated text lists
+echo "Starting download of Mint backgrounds and artwork..."
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
 
-```bash
-sudo dpkg -i mint-backgrounds-uma_1.2_all.deb
-
-```
-
-or
-```
+# 2. Install all downloaded .deb files
+echo "Installing packages..."
 sudo dpkg -i *.deb
+
+# 3. Fix any missing dependencies (common when installing local .debs)
+echo "Resolving dependencies..."
+sudo apt install -f -y
+
+echo "Installation complete!"
+
+```
 
 
 ```
@@ -77,9 +82,36 @@ pamac build mint-backgrounds-uma
 **Option B: Using `debtap**` **
 If you prefer using the `.deb` file directly:
 
-1. Install debtap: `yay -S debtap`
-2. Create the Arch package: `debtap mint-backgrounds-uma_1.2_all.deb`
-3. Install the resulting file: `sudo pacman -U mint-backgrounds-uma-1.2-1-any.pkg.tar.zst`
+1. Install debtap: `yay -S deb
+2. proced like mentioned here
+
+```
+#!/bin/bash
+
+# 1. Download all files
+echo "Starting download of Mint backgrounds and artwork..."
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+
+# 2. Check if debtap is installed
+if ! command -v debtap &> /dev/null; then
+    echo "debtap not found. Installing via yay..."
+    yay -S debtap
+    sudo debtap -u
+fi
+
+# 3. Convert all .deb files to Arch packages
+echo "Converting packages (this may take a while)..."
+for file in *.deb; do
+    debtap -q "$file"  # -q skips questions and uses defaults
+done
+
+# 4. Install the converted packages
+echo "Installing packages..."
+sudo pacman -U *.pkg.tar.zst
+
+echo "Done! Wallpapers should now be in /usr/share/backgrounds/"
+```
 
 ---
  Option C : Downloading tar.gz 
@@ -111,10 +143,28 @@ sudo dnf install alien
 
 ```bash
 # Convert .deb to .rpm
-sudo alien -r mint-backgrounds-uma_1.2_all.deb
+#!/bin/bash
 
-# Install the generated RPM
-sudo dnf install ./mint-backgrounds-uma-1.2-2.noarch.rpm
+# 1. Download all files
+echo "Starting download of Mint backgrounds and artwork..."
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+
+# 2. Install conversion tools
+echo "Installing alien..."
+sudo dnf install alien -y
+
+# 3. Convert .deb to .rpm
+echo "Converting .deb files to .rpm..."
+for file in *.deb; do
+    sudo alien -r --scripts "$file"
+done
+
+# 4. Install the generated RPMs
+echo "Installing RPM packages..."
+sudo dnf install ./*.rpm -y
+
+echo "Done! Check your Desktop settings for the new backgrounds."
 
 ```
 
@@ -149,10 +199,17 @@ mate-background-properties/ — XML files for MATE.
 
 ---
 
+---
+
+
 ## note : This list of the deb and tar.gz will be auto updated as its checked and confirmed 
 
+## note 2 : the deb list is at https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_deb.txt  & https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt  of the deb files . you can direclty get this through  https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt   , https://rt2yrru.github.io/linux_mint_wallpaper/https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt
 
-### Linux Mint Release Versions and Codename
+## note 3 : source i.e .tar.gz list is at .  https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_tar_gz.txt  &  https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/background_tar_gz.txt . you can direclty get this through 
+https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt  , https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+
+## # Linux Mint Release Versions and Codename
 
 | Version | Codename |
 | :--- | :--- |
