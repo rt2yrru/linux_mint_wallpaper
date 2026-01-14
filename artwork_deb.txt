@@ -1,0 +1,16 @@
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.1.6.1_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.1.9.1_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.2.6_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.3.4_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.4.3_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.4.8_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.5.1_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.5.5_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.6.0_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.7.3_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.7.5_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.0_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.4_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.9_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.9.2_all.deb
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.9.3_all.deb

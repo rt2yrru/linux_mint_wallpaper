@@ -1,0 +1,16 @@
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.1.6.1.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.1.9.1.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.2.6.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.3.4.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.4.3.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.4.8.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.5.1.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.5.5.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.6.0.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.7.3.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.7.5.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.0.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.4.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.8.9.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.9.2.tar.xz
+http://packages.linuxmint.com/pool/main/m/mint-artwork/mint-artwork_1.9.3.tar.xz
