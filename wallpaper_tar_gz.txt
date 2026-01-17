@@ -1,0 +1,3 @@
+http://packages.linuxmint.com/pool/main/m/mint-wallpaper-julia/mint-wallpaper-julia_1.0.1.tar.gz
+http://packages.linuxmint.com/pool/main/m/mint-wallpaper-julia/mint-wallpaper-julia_1.1.0.tar.gz
+http://packages.linuxmint.com/pool/main/m/mint-wallpaper-katya/mint-wallpaper-katya_1.1.0.tar.gz

@@ -49,6 +49,7 @@ After installation, the wallpapers are typically located in:
 echo "Starting download of Mint backgrounds and artwork..."
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_deb.txt
 
 # 2. Install all downloaded .deb files
 echo "Installing packages..."
@@ -95,6 +96,7 @@ If you prefer using the `.deb` file directly:
 echo "Starting download of Mint backgrounds and artwork..."
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_deb.txt
 
 # 2. Check if debtap is installed
 if ! command -v debtap &> /dev/null; then
@@ -126,7 +128,8 @@ You can directly download the tar.gz files:
 # 1. Download all tar.gz files
 echo "Downloading Mint backgrounds and artwork source files..."
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
-wget -i https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_tar_gz.txt
 
 # 2. Extract all tar.gz files
 echo "Extracting files..."
@@ -157,6 +160,7 @@ echo "Done! Wallpapers installed to /usr/share/backgrounds/"
 echo "Starting download of Mint backgrounds and artwork..."
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_deb.txt
 
 # 2. Install conversion tools
 echo "Installing alien..."
@@ -187,7 +191,8 @@ Since wallpapers are just image files, you can simply extract them without insta
 # 1. Download all tar.gz source files
 echo "Downloading Mint backgrounds and artwork source files..."
 wget -i https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
-wget -i https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_tar_gz.txt
+wget -i https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_tar_gz.txt
 
 # 2. Extract all tar.gz files
 echo "Extracting files..."
@@ -225,24 +230,30 @@ This list of the deb and tar.gz files will be auto-updated as they are checked a
 The DEB file lists are available at:
 - **Artwork DEBs**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_deb.txt
 - **Backgrounds DEBs**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_deb.txt
+- **Wallpaper DEBs**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/wallpaper_deb.txt
 
 You can directly access these through:
 - https://rt2yrru.github.io/linux_mint_wallpaper/artwork_deb.txt
 - https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_deb.txt
+-  https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_deb.txt
 
 ### Note 3: Source Package Lists (.tar.gz)
 
 The source file lists are available at:
 - **Artwork sources**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/artwork_tar_gz.txt
-- **Background sources**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/background_tar_gz.txt
+- **Background sources**: https://github.com/rt2yrru/linux_mint_wallpaper/blob/main/backgrounds_tar_gz.txt
+- **Wallpapers Sources** : https://github.com/rt2yrru/linux_mint_wallpaper/b/wallpaper_tar_gz.txt
 
 You can directly access these through:
 - https://rt2yrru.github.io/linux_mint_wallpaper/artwork_tar_gz.txt
-- https://rt2yrru.github.io/linux_mint_wallpaper/background_tar_gz.txt
+- https://rt2yrru.github.io/linux_mint_wallpaper/backgrounds_tar_gz.txt
+- https://rt2yrru.github.io/linux_mint_wallpaper/wallpaper_tar_gz.txt
 
 ---
 
 ## Linux Mint Release Versions and Codenames
+
+ubuntu based 
 
 | Version | Codename |
 |---------|----------|
@@ -289,38 +300,23 @@ You can directly access these through:
 
 ------
 
+Debian Based 
+
+| Version | Codename |
+|---------|----------|
+|LMDE 7|Gigi|
+|LMDE 6|Faye|
+|LMDE 5|Elsie|
+|LMDE 4|Debbie|
+|LMDE 3|Cindy|
+|LMDE 2|Betsy|
+|LMDE 1 |(No Codename)|
+------
 
 ## Sources 
 
 ```
-http://packages.linuxmint.com/pool/main/m/mint-artwork/
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-maya
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-nadia
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-olivia
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-petra
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-qiana
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-rafaela
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-rebecca
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-retro
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-rosa
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-sarah
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-serena
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-sonya
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-sylvia
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-tara
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-tessa
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-tina
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-tricia
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-ulyana
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-ulyssa
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-uma
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-una
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-vanessa
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-vera
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-victoria
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-virginia
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-wallpapers
-http://packages.linuxmint.com/pool/main/m/mint-backgrounds-wilma
+http://packages.linuxmint.com/pool/main/m/
 
 
 ```
